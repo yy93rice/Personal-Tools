@@ -1,2 +1,6 @@
 Repository of some little personal tools - feel free to grab some to use
 
+download cleanup.bat - Moves all the .ris & .nbib files in download to a folder "ref_files". Moves all the .docx, .doc, .pdf files to a folder "pdb&docs".
+Also deletes all the extra files - blah(1).ris etc.
+
+

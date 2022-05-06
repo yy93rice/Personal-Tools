@@ -1,29 +1,35 @@
-if not exist "C:\Users\%USERNAME%\Downloads\ref_files" mkdir "C:\Users\%USERNAME%\Downloads\ref_files"
-if not exist "C:\Users\%USERNAME%\Downloads\pdf&docs" mkdir "C:\Users\%USERNAME%\Downloads\pdf&docs"
-if not exist "C:\Users\%USERNAME%\Downloads\images" mkdir "C:\Users\%USERNAME%\Downloads\images"
-if not exist "C:\Users\%USERNAME%\Downloads\images" mkdir "C:\Users\%USERNAME%\Downloads\pdb&pymol"
+cd %Userprofile%/Downloads
+
+if not exist ref_files mkdir ref_files
+if not exist "pdf&docs" mkdir "pdf&docs"
+if not exist images mkdir images
+if not exist "pdb&pymol" mkdir "pdb&pymol"
+if not exist zip mkdir zip
 
 
-move "C:\Users\%USERNAME%\Downloads\*.ris" "C:\Users\%USERNAME%\Downloads\ref_files"
-move "C:\Users\%USERNAME%\Downloads\*.nbib" "C:\Users\%USERNAME%\Downloads\ref_files"
-move "C:\Users\%USERNAME%\Downloads\*.enw" "C:\Users\%USERNAME%\Downloads\ref_files"
+move *.ris ref_files
+move *.nbib ref_files
+move *.enw ref_files
 
-move "C:\Users\%USERNAME%\Downloads\*.pdf" "C:\Users\%USERNAME%\Downloads\pdf&docs"
-move "C:\Users\%USERNAME%\Downloads\*.docx" "C:\Users\%USERNAME%\Downloads\pdf&docs"
-move "C:\Users\%USERNAME%\Downloads\*.doc" "C:\Users\%USERNAME%\Downloads\pdb&docs"
+move *.pdf "pdf&docs"
+move *.docx "pdf&docs"
+move *.doc "pdb&docs"
 
-move "C:\Users\%USERNAME%\Downloads\*.jpg" "C:\Users\%USERNAME%\Downloads\images"
-move "C:\Users\%USERNAME%\Downloads\*.jpeg" "C:\Users\%USERNAME%\Downloads\images"
-move "C:\Users\%USERNAME%\Downloads\*.png" "C:\Users\%USERNAME%\Downloads\images"
-move "C:\Users\%USERNAME%\Downloads\*.tif" "C:\Users\%USERNAME%\Downloads\images"
+move *.jpg images
+move *.jpeg images
+move *.png images
+move *.tif images
 
+move *.pdb "pdb&pymol"
+move *.pse "pdb&pymol"
 
-move "C:\Users\%USERNAME%\Downloads\*.pdb" "C:\Users\%USERNAME%\Downloads\pdb&pymol"
-move "C:\Users\%USERNAME%\Downloads\*.pse" "C:\Users\%USERNAME%\Downloads\pdb&pymol"
+move *.zip zip
+move *.rar zip
+move *.7z zip
 
-
-del "C:\Users\%USERNAME%\Downloads\pdf&docs\*(?).*"
-del "C:\Users\%USERNAME%\Downloads\ref_files\*(?).*"
-del "C:\Users\%USERNAME%\Downloads\images\*(?).*"
-del "C:\Users\%USERNAME%\Downloads\pdb&pymol\*(?).*"
-del "C:\Users\%USERNAME%\Downloads\*(?).*"
+del "*(?).*"
+del "\ref_files\*(?).*"
+del "\pdf&docs\*(?).*"
+del "\images\*(?).*"
+del "\pdb&pymol\*(?).*"
+del "\zip\*(?).*"
